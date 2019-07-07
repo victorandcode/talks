@@ -1,5 +1,6 @@
 const merge = require('webpack-merge')
 const WebpackCdnPlugin = require('webpack-cdn-plugin');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 const base = require('./webpack.base.config');
 
@@ -24,5 +25,8 @@ module.exports = merge(base, {
                 },
             ]
         }),
+        new MomentLocalesPlugin({
+            localesToKeep: ['es', 'en'],
+        })
     ]
 });
