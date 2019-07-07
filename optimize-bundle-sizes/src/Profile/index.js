@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import _ from 'lodash';
+import get from 'lodash/get';
 
 import { fetchUserInfo } from './api';
 
@@ -11,8 +11,8 @@ const Profile = () => {
 
     useEffect(() => {
         fetchUserInfo().then(userInfo => {
-            const street = _.get(userInfo, 'address.street');
-            const number = _.get(userInfo, 'address.number');
+            const street = get(userInfo, 'address.street');
+            const number = get(userInfo, 'address.number');
             setFullAdress(`${street} #${number}`);
 
             const fullName = `${userInfo.name} ${userInfo.surname}`;
