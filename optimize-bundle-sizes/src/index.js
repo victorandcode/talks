@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Main = () => (
-    <div>Hello there</div>
+import Profile from './Profile';
+
+const App = () => (
+    <Profile />
 );
 
-ReactDOM.render(<Main />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
