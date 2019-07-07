@@ -18,6 +18,8 @@ const Calendar = () => {
 
     return (
         <>
+            <h1>Calendar</h1>
+            <hr />
             {events.length ? <ul>
                 {events.map(event => <li key={event.title}>{event.title}</li>)}
             </ul>
