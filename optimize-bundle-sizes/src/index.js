@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy} from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import Profile from './Profile';
-import Calendar from './Calendar'
+const Profile = lazy(() => import('./Profile'));
+const Calendar = lazy(() => import('./Calendar'));
 
 const App = () => (
     <Router>
@@ -20,8 +20,10 @@ const App = () => (
                 </ul>
             </nav>
         </header>
-        <Route path="/calendar" component={Calendar} />
-        <Route exact path="/" component={Profile} />
+        <Suspense fallback={<div>Loading...</div>}>
+            <Route path="/calendar" component={Calendar} />
+            <Route exact path="/" component={Profile} />
+        </Suspense>
     </Router>
 );
 
