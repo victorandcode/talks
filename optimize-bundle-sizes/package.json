@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build:analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "start": "webpack-dev-server --open --mode development"
   },
   "keywords": [],
