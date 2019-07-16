@@ -5,7 +5,9 @@ const userInfo = {
         door: '4'
     },
     name: 'General',
-    surname: 'Kennobi',
+    surname: 'Kenobi',
+    age: 38,
+    occupation: 'Jedi Master',
 };
 
 export const fetchUserInfo = () => Promise.resolve(userInfo);

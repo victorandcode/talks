@@ -8,14 +8,14 @@ import Calendar from './Calendar'
 const App = () => (
     <Router>
         <header>
-            Bundle optimizer portal
+            <h1>Bundle optimizer portal 📦</h1>
             <nav>
-                <ul>
-                    <li>
-                        <Link to="/calendar">Calendar</Link>
+                <ul className='nav-links'>
+                    <li className='nav-link'>
+                        <Link to="/">👤 Profile</Link>
                     </li>
-                    <li>
-                        <Link to="/">Home</Link>
+                    <li className='nav-link'>
+                        <Link to="/calendar">📅 Calendar</Link>
                     </li>
                 </ul>
             </nav>

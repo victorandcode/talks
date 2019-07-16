@@ -10,7 +10,7 @@ const Calendar = () => {
         fetchEvents.then(events => {
             const normalizedEvents = events.map(event => ({
                 title: event.title,
-                date: moment(event.date).format('LLLL')
+                date: moment(event.date).format('MMM Do YY')
             }));
             setEvents(normalizedEvents);
         });
@@ -18,10 +18,10 @@ const Calendar = () => {
 
     return (
         <>
-            <h1>Calendar</h1>
+            <h2>Calendar</h2>
             <hr />
             {events.length ? <ul>
-                {events.map(event => <li key={event.title}>{event.title}</li>)}
+                {events.map(event => <li key={event.title} className='calendar-item'>{event.title} on <span className='calendar-item-time'>{event.date}</span></li>)}
             </ul>
             : <p>No events available</p> }
         </>
