@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8"/>
+  </head>
+  <body>
+    <button onclick="alert('I\'m pressed')">Hello there</button>
+    <script>
+      const body = document.getElementsByTagName('body')[0];
+      const section = document.createElement('section');
+      const paragraph = document.createElement('p');
+      paragraph.textContent = 'Sit sunt ex laboris sit nulla laborum cupidatat.';
+      section.appendChild(paragraph);
+      body.appendChild(section);
+    </script>
+  </body>
+</html>
