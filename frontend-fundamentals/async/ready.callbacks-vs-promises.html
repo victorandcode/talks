@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Transform executeInOneSeconds and main into promise based functions
+            with .then
+        */
+        function executeInOneSecond(operation, fn) {
+            setTimeout(() => {
+                console.log("Executing: ", operation);
+                fn();
+            }, 1000);
+        }
+        function main() {
+            executeInOneSecond('first operation', function(result) {
+                executeInOneSecond('second operation', function(newResult) {
+                    executeInOneSecond('third operation', function(finalResult) {
+                        executeInOneSecond('fourth operation', function() {});
+                    });
+                });
+            });
+        }
+        main();
+    </script>
+</body>
+</html>
