@@ -1,12 +1,9 @@
 /**
  * Questions to answer:
- * - What does Object.create do
+ * - Object.create do
  * - What is the value of instance.prototype
  * - How does an attribute get resolved
  * - When to assign to obj.prototype.myMethod
- * - How to use ES6 for classical inheritance
- *  Can I do abstract methods
- *  How can I can super methods
  *  How can I call attributes from the parent
  */
 
